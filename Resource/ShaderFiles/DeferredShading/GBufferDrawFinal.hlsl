@@ -66,16 +66,6 @@ float4 PSmain(VSOutput input) : SV_TARGET
 
         lightOutput += 1.0f - (len / lightRadius);
         lightOutput = clamp(lightOutput,ambient,float3(1.0f,1.0f,1.0f));
-        //lightV = normalize(lightV);
-        //float3 attenVec = float3(0.3f,0.1f,0.1f);
-        //float atten = saturate(1.0f / (attenVec.x + attenVec.y * len + attenVec.z * len * len));
-        //float bright = dot(normalize(worldNormalVec.xyz),lightV);
-        //float3 lightColor = float3(1.0f,1.0f,1.0f);
-
-        //float ambient = 0.5f;
-        //bright = clamp(bright,ambient,1.0f);
-        //float3 light = (bright * atten) * lightColor;
-        //lightOutput = light;
     }
     float4 outputColor = float4(albedoColor.xyz * lightOutput,1.0f);
     return outputColor;

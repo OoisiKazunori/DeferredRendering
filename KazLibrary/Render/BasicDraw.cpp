@@ -9,8 +9,8 @@ DrawFuncData::DrawCallData BasicDraw::SetTex()
 {
 	DrawFuncData::PipelineGenerateData lData;
 	lData.desc = DrawFuncPipelineData::SetTex();
-	lData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "ShaderFile/" + "MultiSprite.hlsl", "VSmain", "vs_6_4", SHADER_TYPE_VERTEX);
-	lData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "ShaderFile/" + "MultiSprite.hlsl", "PSmain", "ps_6_4", SHADER_TYPE_PIXEL);
+	lData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "MultiSprite.hlsl", "VSmain", "vs_6_4", SHADER_TYPE_VERTEX);
+	lData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "MultiSprite.hlsl", "PSmain", "ps_6_4", SHADER_TYPE_PIXEL);
 	lData.blendMode = DrawFuncPipelineData::PipelineBlendModeEnum::ALPHA;
 
 	//レンダーターゲットの設定

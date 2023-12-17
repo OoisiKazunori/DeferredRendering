@@ -109,8 +109,8 @@ RenderScene::RenderScene(DrawingByRasterize& arg_rasterize) :
 	DrawFuncData::PipelineGenerateData pipelineData;
 	pipelineData.desc = DrawFuncPipelineData::SetTex();
 	pipelineData.desc.DepthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_ALWAYS;
-	pipelineData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "ShaderFile/" + "GBufferDrawFinal.hlsl", "VSmain", "vs_6_4", SHADER_TYPE_VERTEX);
-	pipelineData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "ShaderFile/" + "GBufferDrawFinal.hlsl", "PSmain", "ps_6_4", SHADER_TYPE_PIXEL);
+	pipelineData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "DeferredShading/" + "GBufferDrawFinal.hlsl", "VSmain", "vs_6_4", SHADER_TYPE_VERTEX);
+	pipelineData.shaderDataArray.emplace_back(KazFilePathName::RelativeShaderPath + "DeferredShading/" + "GBufferDrawFinal.hlsl", "PSmain", "ps_6_4", SHADER_TYPE_PIXEL);
 	pipelineData.blendMode = DrawFuncPipelineData::PipelineBlendModeEnum::NONE;
 	DrawFuncData::DrawCallData drawCall = DrawFuncData::SetSpriteAlphaData(pipelineData);
 	//ÉâÉCÉgÇÃîzóÒêî
